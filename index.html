@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            perspective: 570px;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: url("./img/168d4e538c88e81653d42dbbeb46c071.jpeg") no-repeat;
+            background-size: 100%;
+        }
+
+        @keyframes whereabouts {
+            form {
+                top: 0;
+            }
+
+            to {
+                top: 1000px;
+            }
+        }
+
+        @keyframes bangs {
+            0% {
+                top: 400px;
+            }
+
+            50% {
+                top: 370px;
+            }
+
+            100% {
+                top: 400px;
+            }
+        }
+
+        #main {
+            position: absolute;
+            left: -300px;
+            margin-left: 50%;
+            top: -140px;
+            background: rgba(0, 0, 0, .7);
+            border: 1px solid #000;
+            transform: rotateX(50deg);
+            width: 600px;
+            height: 750px;
+            background-size: 300px 500px;
+            overflow: hidden;
+        }
+
+        #bottom {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 35px;
+            background-color: rgba(80, 80, 80, 0.7);
+        }
+
+        #bottom li {
+            width: 25%;
+            height: 100%;
+            border-radius: 10px;
+            border: 1px solid rgb(45, 110, 153);
+            background-color: rgba(53, 67, 99, 0.5);
+            line-height: 35px;
+            text-align: center;
+            color: #fff;
+            float: left;
+
+        }
+
+        #row {
+            width: 100%;
+            height: 100%;
+        }
+
+        #row li {
+            position: relative;
+            width: 25%;
+            height: 100%;
+            float: left;
+            border-right: 1px solid #000;
+        }
+
+        #row li .result {
+            width: 100%;
+            height: 100%;
+            background-color: rgb(63, 61, 35);
+            opacity: 0;
+        }
+
+        #row li:nth-child(4) {
+            border-right: none;
+        }
+
+        .chunk {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 35px;
+            border-radius: 5px;
+            background-color: rgb(62, 159, 238);
+            z-index: 999;
+            animation: whereabouts 1s linear;
+        }
+
+        .bangs {
+            position: absolute;
+            width: 200px;
+            text-align: center;
+            font-size: 60px;
+            top: 400px;
+            margin-left: 50%;
+            left: -100px;
+            animation: bangs 0.2s;
+        }
+
+        #startGame {
+            position: absolute;
+            width: 100%;
+            height: 1080px;
+            font-size: 60px;
+            color: #fff;
+            text-align: center;
+            line-height: 750px;
+            background: rgba(0, 0, 0, .5);
+            z-index: 1;
+        }
+
+        #HP {
+            position: absolute;
+            margin-left: 50%;
+            left: 300px;
+            top: -140px;
+            width: 15px;
+            height: 750px;
+            z-index: 10;
+            transform: rotateX(50deg);
+        }
+
+        #HP li {
+            float: left;
+            width: 100%;
+            height: 10%;
+            background-color: rgb(70, 70, 204);
+            border: 1px solid rgba(170, 166, 166, 0.705);
+        }
+
+        #score {
+            position: absolute;
+            font-size: 50px;
+            color: #fff;
+            margin-left: 50%;
+            left: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="startGame">开始游戏</div>
+    <div id="main">
+        <ul id="row">
+            <li>
+                <p class="result"></p>
+            </li>
+            <li>
+                <p class="result"></p>
+            </li>
+            <li>
+                <p class="result"></p>
+            </li>
+            <li>
+                <p class="result"></p>
+            </li>
+        </ul>
+        <ul id="bottom">
+            <li>D</li>
+            <li>F</li>
+            <li>J</li>
+            <li>K</li>
+        </ul>
+        <p class="bangs"></p>
+
+    </div>
+    <div id="score">0</div>
+    <ul id="HP">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <script src="./js/劲乐团.js"></script>
+</body>
+
+</html>
